@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Calmpage: one readable design for every website",
+  "short_name": "Calmpage",
+  "version": "1.0.0",
+  "description": "Kills cookie banners, newsletter pop-ups and 'open in app' nags, then shows any article in one clean design you pick. Optional: every tab, all session.",
+  "icons": { "16": "icons/16.png", "32": "icons/32.png", "48": "icons/48.png", "128": "icons/128.png" },
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js", "scripts": ["background.js"] },
+  "action": { "default_popup": "popup.html", "default_title": "Calmpage (Alt+Shift+R)", "default_icon": { "16": "icons/16.png", "32": "icons/32.png" } },
+  "options_ui": { "page": "options.html", "open_in_tab": true },
+  "commands": {
+    "toggle-reader": { "suggested_key": { "default": "Alt+Shift+R" }, "description": "Toggle Calmpage reader on this tab" }
+  },
+  "content_scripts": [
+    { "matches": ["<all_urls>"], "js": ["Readability.js", "Readability-readerable.js", "calm.js", "license.js", "content.js"], "run_at": "document_idle" }
+  ],
+  "browser_specific_settings": { "gecko": { "id": "calmpage@nidhi-bhai.github.io", "strict_min_version": "121.0" } }
+}

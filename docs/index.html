@@ -1,0 +1,112 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calmpage: 5 people on HN said they'd pay for this, so I built it</title>
+<meta name="description" content="A browser extension that kills cookie banners, newsletter pop-ups and 'open in app' nags, then shows any article in one readable design you pick. Free, with an optional Pro.">
+<meta property="og:title" content="Calmpage: one readable design for every website">
+<meta property="og:description" content="5 different people on Hacker News said they'd pay for this. So I built it. Free extension + bookmarklet.">
+<meta property="og:image" content="https://nidhi-bhai.github.io/calmpage/og.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="icon.png">
+<style>
+:root{--bg:#fbf8f1;--fg:#1d1c1a;--mut:#6b665c;--line:#e6dfcf;--acc:#1a5fb4;--card:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 Charter,"Iowan Old Style",Georgia,serif}
+.w{max-width:880px;margin:0 auto;padding:0 22px}header{padding:56px 0 10px}
+.kick{font:600 13px system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}
+h1{font-size:clamp(30px,5vw,46px);line-height:1.12;margin:.25em 0 .35em}h2{font-size:28px;line-height:1.2;margin:56px 0 10px}
+.lede{font-size:20px;color:#3a3833;max-width:42em}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 8px}
+.btn{font:600 15px system-ui,sans-serif;text-decoration:none;padding:12px 18px;border-radius:9px;border:1px solid var(--fg);color:var(--fg);background:transparent;cursor:pointer;display:inline-block}
+.btn.p{background:var(--fg);color:var(--bg)}.small{font:13px/1.5 system-ui,sans-serif;color:var(--mut)}
+.quotes{display:grid;gap:12px;margin-top:18px}
+.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.q p{margin:0 0 6px;font-size:18px}.q a{font:13px system-ui,sans-serif;color:var(--mut)}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}.ba figure{margin:0}.ba img{width:100%;border:1px solid var(--line);border-radius:10px;display:block}
+.ba figcaption{font:13px system-ui,sans-serif;color:var(--mut);margin-top:6px;text-align:center}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.step b{font-family:system-ui,sans-serif}
+.bm{font:600 15px system-ui,sans-serif;background:#ffe9a8;border:1px dashed #b48a00;color:#4a3500;padding:10px 16px;border-radius:9px;text-decoration:none;display:inline-block;cursor:grab}
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:14px}.plan{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.plan h3{margin:0;font-size:22px}.price{font:700 30px system-ui,sans-serif;margin:8px 0}.price span{font-size:15px;font-weight:400;color:var(--mut)}
+.plan ul{padding-left:18px;margin:10px 0 14px}.plan li{margin:4px 0}
+.pp{min-height:50px;margin-top:8px}.or{font:13px system-ui,sans-serif;color:var(--mut);margin:12px 0 6px}
+details{border-top:1px solid var(--line);padding:12px 0}summary{cursor:pointer;font-weight:600}
+footer{margin:70px 0 40px;font:13px/1.6 system-ui,sans-serif;color:var(--mut)}a{color:var(--acc)}
+@media(max-width:720px){.ba,.steps,.plans{grid-template-columns:1fr}}
+</style></head><body>
+<div class="w">
+<header>
+<div class="kick">From <a href="https://nidhi-bhai.github.io/unbuilt/">The Unbuilt Index</a> · we built it</div>
+<h1>5 people on Hacker News said they'd pay for this. So I built it.</h1>
+<p class="lede"><b>Calmpage</b> kills cookie banners, newsletter pop-ups, "open in app" bars and sticky headers, then shows any article in <i>one</i> readable design you pick. Same font, size and colors on every site.</p>
+<div class="cta"><a class="btn p" href="calmpage-extension.zip" download>Download the extension (free)</a><a class="btn" href="demo.html">Try it on an awful page</a><a class="btn" href="#pricing">Pro: 7 days free</a></div>
+<p class="small">Chrome, Edge, Brave and Arc today. No tracking, no account, no network requests. Open source.</p>
+</header>
+
+<h2>They asked. In their own words.</h2>
+<div class="quotes">
+<div class="q"><p>"I would pay money for a browser plugin that restyles every web page to a single readable/accessible design that I like."</p><a href="https://news.ycombinator.com/item?id=40056016">xpl · Apr 2024 · HN</a></div>
+<div class="q"><p>"Developers: I would pay for a firefox or chrome extension that lets you just toggle the whole browsing session or tab into reader mode"</p><a href="https://news.ycombinator.com/item?id=32999574">bityard · Sep 2022 · HN</a></div>
+<div class="q"><p>"I would pay for this. At least a buck a year. Maybe 5. Maybe 10… Best if I could pay monthly or every three months so I can bail"</p><a href="https://news.ycombinator.com/item?id=35228158">readonthegoapp · Mar 2023 · on "Ask HN: Death to blatantly obstructive popups"</a></div>
+<div class="q"><p>"I would happily pay for an Open Source adblocker-style extension that intentionally breaks 'do you want to download and install our app…' pop-ups."</p><a href="https://news.ycombinator.com/item?id=28679004">JoshTriplett · Sep 2021 · HN</a></div>
+<div class="q"><p>"I would pay good money for a solution to the cookies popup problem."</p><a href="https://news.ycombinator.com/item?id=27769985">fumblebee · Jul 2021 · HN</a></div>
+</div>
+<p class="small">Found by searching 11,986 HN comments for "I'd pay for", "take my money" and similar. <a href="https://nidhi-bhai.github.io/unbuilt/">See the full index</a>.</p>
+
+<h2>Before and after</h2>
+<div class="ba"><figure><img src="before.png" alt="A news page covered by a cookie banner, a newsletter modal, an app bar and ads"><figcaption>The page they give you</figcaption></figure>
+<figure><img src="after.png" alt="The same article in a clean single-column design"><figcaption>The page you get, one keystroke later</figcaption></figure></div>
+
+<h2>How it works</h2>
+<div class="steps">
+<div class="step"><b>1. Pop-ups die on load</b><br>Cookie and consent banners, newsletter modals, "get the app" bars and scroll locks are hidden as the page loads. Nothing is clicked or accepted for you.</div>
+<div class="step"><b>2. One key, calm page</b><br>Press <b>Alt+Shift+R</b> or click the icon. The article opens in your design. Esc brings the original back.</div>
+<div class="step"><b>3. Pro: every tab, all session</b><br>Turn on session mode and every article you open is already calm. Or pick sites that always open calm.</div>
+</div>
+
+<h2>No install? Use the bookmarklet</h2>
+<p>Drag this to your bookmarks bar, then click it on any article: <a class="bm" id="bm" href="#" title="Drag me to your bookmarks bar">Calmpage</a></p>
+<p class="small">Works in any desktop browser, Firefox included. A few sites block bookmarklets with strict security rules; the extension works there.</p>
+
+<h2>Install the extension</h2>
+<ol>
+<li><a href="calmpage-extension.zip" download>Download calmpage-extension.zip</a> and unzip it.</li>
+<li>Open <code>chrome://extensions</code> (or <code>edge://extensions</code>, <code>brave://extensions</code>) and switch on <b>Developer mode</b>.</li>
+<li>Click <b>Load unpacked</b> and pick the unzipped folder. Done.</li>
+</ol>
+<p class="small">Store listings are on the way. Source: <a href="https://github.com/Nidhi-bhai/calmpage">github.com/Nidhi-bhai/calmpage</a>.</p>
+
+<h2 id="pricing">Pricing</h2>
+<p>readonthegoapp asked for monthly or every three months "so I can bail". So that's what it is.</p>
+<div class="plans">
+<div class="plan"><h3>Free</h3><div class="price">$0</div>
+<ul><li>Pop-up, cookie banner and app-bar killer on every site</li><li>Reader on any tab (Alt+Shift+R)</li><li>Paper or Dark design</li><li>Bookmarklet</li></ul>
+<a class="btn" href="calmpage-extension.zip" download>Download</a></div>
+<div class="plan"><h3>Pro</h3><div class="price">$3 <span>/ month</span></div><div class="small">or $8 every 3 months · 7 days free · cancel anytime in PayPal</div>
+<ul><li><b>Session mode:</b> every article in every tab opens calm</li><li><b>Your design:</b> any theme, font, size, width, line height, colors</li><li><b>Always-calm sites</b> list</li><li>Funds more builds from the Unbuilt Index</li></ul>
+<div class="or">Monthly · $3</div><div class="pp" id="pp-month"></div>
+<div class="or">Every 3 months · $8</div><div class="pp" id="pp-quarter"></div>
+<p class="small" id="ppmsg"></p></div>
+</div>
+
+<h2>Questions</h2>
+<details><summary>Doesn't my browser already have reader view?</summary><p>It does, page by page, with its own look. It can't be switched on for a whole session, and on many sites the cookie banner sits on top of the page before you get that far. Calmpage clears the pop-ups first and uses your one design everywhere.</p></details>
+<details><summary>Does it accept cookies for me?</summary><p>No. It hides the banner. It never clicks "accept".</p></details>
+<details><summary>Is it an ad blocker?</summary><p>No. The free version leaves the original page alone apart from pop-ups and sticky bars. In reader view you only see the article, so ads aren't there. Pair it with uBlock Origin if you want both.</p></details>
+<details><summary>What does it send anywhere?</summary><p>Nothing. No analytics, no server. Your settings sync through your browser's own storage.</p></details>
+<details><summary>How does Pro unlock?</summary><p>After PayPal checkout you get your subscription ID. Paste it into Calmpage settings. It's checked on your device.</p></details>
+
+<footer>Built by <a href="https://x.com/RealNidhibhai">@RealNidhibhai</a> from <a href="https://nidhi-bhai.github.io/unbuilt/">The Unbuilt Index</a>, a ranked list of what HN said it would pay for. Not affiliated with Hacker News or Y Combinator. Quotes link to their authors' comments. Reader engine: Mozilla Readability (Apache-2.0). <a href="privacy.html">Privacy</a>.</footer>
+</div>
+<script>
+document.getElementById('bm').href="javascript:(function(){var s=document.createElement('script');s.src='https://nidhi-bhai.github.io/calmpage/cp.js?v=1';document.body.appendChild(s);})();";
+document.getElementById('bm').addEventListener('click',function(e){e.preventDefault();alert('Drag this button to your bookmarks bar, then click it on any article.');});
+</script>
+<script src="https://www.paypal.com/sdk/js?client-id=BAAb5cq2I0Xx3lFhRJNBjnuGCVT5VDtWfWHgAuSasCoaA_F4cFzLmDWcDmYhsXG6panQVSaRPR3gvrgE9w&vault=true&intent=subscription&currency=USD" data-sdk-integration-source="button-factory"></script>
+<script>
+function mk(plan,el,label){paypal.Buttons({style:{shape:'rect',color:'black',layout:'vertical',label:'subscribe'},
+ createSubscription:function(d,a){return a.subscription.create({plan_id:plan,application_context:{shipping_preference:'NO_SHIPPING',brand_name:'Calmpage'}});},
+ onApprove:function(d){location.href='pro.html#'+encodeURIComponent(d.subscriptionID);},
+ onError:function(){document.getElementById('ppmsg').textContent='PayPal had a problem loading. Refresh the page and try again.';}
+}).render(el);}
+if(window.paypal){mk('P-4JR9512073021552ENLY3BHQ','#pp-month');mk('P-71E10703W39426353NLY3BHQ','#pp-quarter');}
+else document.getElementById('ppmsg').textContent='PayPal is blocked in this browser. Disable script blocking for this page to subscribe.';
+</script>
+</body></html>

@@ -1,0 +1,35 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Annoying Article: a Calmpage test page</title>
+<style>
+body{font-family:Impact,Arial,sans-serif;margin:0;background:#fff;color:#444;font-size:14px}
+.site-header{position:sticky;top:0;background:#e00;color:#fff;padding:18px;font-size:22px;z-index:50}
+.ad{background:repeating-linear-gradient(45deg,#ff0,#ff0 10px,#f0f 10px,#f0f 20px);height:120px;margin:12px 0;text-align:center;line-height:120px;font-size:26px}
+main{display:flex;gap:20px;padding:10px}article{flex:3;font-size:13px;line-height:1.2}aside{flex:1}
+#cookie-consent{position:fixed;bottom:0;left:0;right:0;background:#222;color:#fff;padding:20px;z-index:9999}
+.newsletter-modal{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:10000;display:flex;align-items:center;justify-content:center}
+.newsletter-modal .box{background:#fff;padding:40px;max-width:420px;font-size:20px}
+.get-app-bar{position:fixed;top:0;left:0;right:0;background:#06c;color:#fff;padding:14px;z-index:9998;font-size:18px}
+body.modal-open{overflow:hidden}
+</style></head>
+<body class="modal-open">
+<header class="site-header">DAILY CLICKS™ — NEWS YOU WON'T BELIEVE</header>
+<div class="get-app-bar">📱 This story is better in our app! <a href="#" style="color:#fff">Open in app</a> <button>Continue</button></div>
+<div class="ad">BUY NOW!!! 90% OFF!!!</div>
+<main><article>
+<h1>Why Reading on the Web Got So Hard</h1>
+<p class="byline">By A. Writer · Demo page</p>
+<p>You opened a link to read one article. Before the first sentence, the page asked you to accept cookies, subscribe to a newsletter, and download an app. A red header followed you down the page, and a banner ad flashed between paragraphs.</p>
+<p>None of that is the article. The article is a few hundred words of text and maybe one picture. Everything else is the site asking for something: your consent, your email, your attention, or a tap on an ad.</p>
+<div class="ad">SPONSORED: YOU WON'T BELIEVE #7</div>
+<p>On Hacker News, people keep asking for the same fix. One wrote that they would pay money for a browser plugin that restyles every web page to a single readable design they like. Another asked for an extension that toggles the whole browsing session into reader mode. A third said they would pay for a way to kill obstructive pop-ups, and named a price.</p>
+<p>Browsers already have a reader view, but you have to click it on every page, it can't be set for a whole session, and the pop-ups usually still block the page before you get there. Cookie banners in particular often sit on top of the reader button itself.</p>
+<h2>What a calm page looks like</h2>
+<p>A calm page has one column, a comfortable line length of 60 to 75 characters, a font size you can read without leaning in, and enough space between lines. It has no fixed bars, no modals and no scroll lock. It looks the same on every site, because it is your design, not theirs.</p>
+<p>That is all this test page is for. If you are reading this in Calmpage, the cookie banner, the newsletter pop-up, the app bar, the sticky header and the ads are gone, and the text is in your font and colors.</p>
+<p>Press Esc or click Original to see the mess again.</p>
+</article><aside><div class="ad" style="height:400px">AD</div></aside></main>
+<div id="cookie-consent">We value your privacy 🍪 We and our 847 partners use cookies. <button>Accept all</button> <button>Manage</button></div>
+<div class="newsletter-modal" role="dialog" aria-modal="true"><div class="box"><b>WAIT! Don't miss out!</b><p>Get our daily newsletter. 2 million readers can't be wrong.</p><input placeholder="email"><button>Subscribe</button><p><small>No thanks, I hate news</small></p></div></div>
+<div style="position:fixed;right:16px;bottom:90px;z-index:2147483646"><button id="cpbtn" style="font:600 16px system-ui;padding:12px 16px;border-radius:10px;background:#1d1c1a;color:#fbf8f1;border:0;cursor:pointer;box-shadow:0 4px 18px rgba(0,0,0,.3)">✨ Calm this page</button></div>
+<script>document.getElementById("cpbtn").onclick=function(){var s=document.createElement("script");s.src="cp.js?v=1";document.body.appendChild(s);this.parentNode.remove();};</script>
+</body></html>

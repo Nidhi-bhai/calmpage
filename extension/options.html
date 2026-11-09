@@ -1,0 +1,30 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Calmpage settings</title><link rel="stylesheet" href="ui.css"></head>
+<body class="opts">
+<h1>Calmpage settings</h1>
+<section>
+<h2>Pro key</h2>
+<p class="muted">Paste the subscription ID PayPal showed after checkout (looks like <code>I-ABCD1234EFGH</code>). It's checked on this device only.</p>
+<div class="row"><input id="key" placeholder="I-XXXXXXXXXXXX" size="22"><button id="saveKey" class="primary">Save</button><span id="keyMsg"></span></div>
+<p class="small"><a href="https://nidhi-bhai.github.io/calmpage/#pricing" target="_blank">Get Pro: $3/mo or $8 per 3 months, 7 days free</a> · cancel anytime in PayPal</p>
+</section>
+<section>
+<h2>Your design <span class="pro">PRO</span></h2>
+<p class="muted">Free uses Paper or Dark. Pro uses everything below on every page.</p>
+<div class="grid">
+<label>Theme <select id="theme"><option value="paper">Paper</option><option value="white">White</option><option value="sepia">Sepia</option><option value="dark">Dark</option><option value="black">Black (OLED)</option><option value="custom">Custom colors</option></select></label>
+<label>Font <select id="font"><option value="serif">Serif</option><option value="sans">Sans</option><option value="mono">Mono</option><option value="dyslexic">Dyslexia-friendly</option></select></label>
+<label>Text size <input id="size" type="number" min="12" max="34"> px</label>
+<label>Line width <input id="width" type="number" min="40" max="120"> characters</label>
+<label>Line height <input id="line" type="number" min="1.2" max="2.4" step="0.05"></label>
+<label>Background <input id="bg" type="color"></label>
+<label>Text <input id="fg" type="color"></label>
+<label>Links <input id="link" type="color"></label>
+</div>
+<label class="row"><input type="checkbox" id="sticky"> Unstick sticky headers and bars</label>
+<label class="row"><input type="checkbox" id="autoClean"> Kill pop-ups automatically on every site</label>
+<div class="row"><button id="save" class="primary">Save design</button><span id="msg"></span></div>
+<iframe id="preview" title="preview"></iframe>
+</section>
+<section><h2>Privacy</h2><p class="muted small">Calmpage makes no network requests. Settings sync through your browser's own storage. Open source: <a href="https://github.com/Nidhi-bhai/calmpage" target="_blank">github.com/Nidhi-bhai/calmpage</a></p></section>
+<script src="calm.js"></script><script src="license.js"></script><script src="options.js"></script>
+</body></html>
